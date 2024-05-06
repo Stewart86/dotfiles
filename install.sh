@@ -1,5 +1,8 @@
 # Install Essential Tools
 
+echo "set system timezone to Asia/Singapore"
+set-timezone Asia/Singapore
+
 echo "Upgrading current packages.."
 sudo apt-get update && sudo apt-get upgrade -y
 
@@ -22,10 +25,14 @@ sudo apt-get install -y \
   btop \
   lsd \
   gdu \
-  gh
+  gh \
+  stow \
+  git
 
 echo "Installing zoxide.."
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+
+stow fish
 
 echo "Change default shell to fish.."
 if [ -f /usr/bin/fish ]; then
@@ -50,7 +57,8 @@ fnm default latest
 
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 
-pnpm install -g tree-sitter-cli
+
+pnpm install -g tree-sitter-cli commitizen cz-emoji-conventional
 
 echo "Installing Python.."
 
@@ -63,14 +71,11 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
 
+stow layzgit nvim
+
 echo "Installing yazi.."
 
 cargo install --locked yazi-fm yazi-cli
 
-stow fish layzgit nvim home ssh_pub
-
-pnpm install -g commitizen
-
-
-# include git user config
+stow home ssh_pub
 

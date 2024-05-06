@@ -12,6 +12,12 @@ The install script only target fish shell as the primary shell and will `chsh`
 to fish shell as a default shell. Therefore, when environment variables requires
 for any tools, it is only configured in fish shell's config.
 
+## Install
+
+requirements
+
+* none (clone this repository and run `./install.sh`)
+
 **note**: you may require to `chmod` the install script to run on your system.
 
 ## Tools being installed

@@ -13,5 +13,6 @@ return {
       "markdown_inline",
       -- add more arguments for adding more treesitter parsers
     })
+    opts.matchup = { enabled = true }
   end,
 }

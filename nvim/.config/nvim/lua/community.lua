@@ -5,6 +5,9 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
+  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+  { import = "astrocommunity.project.nvim-spectre" },
+
   { import = "astrocommunity.pack.lua" },
   -- import/override with your plugins folder
   { import = "astrocommunity.pack.typescript" },
@@ -15,13 +18,13 @@ return {
   { import = "astrocommunity.pack.lua" },
 
   { import = "astrocommunity.lsp.garbage-day-nvim" },
-  { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
   { import = "astrocommunity.lsp.lsp-lens-nvim" },
   { import = "astrocommunity.lsp.lsp-signature-nvim" },
 
   { import = "astrocommunity.motion.nvim-surround" },
 
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
+  { import = "astrocommunity.editing-support.nvim-treesitter-context" },
 
   { import = "astrocommunity.git.git-blame-nvim" },
 
