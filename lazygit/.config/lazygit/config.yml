@@ -1,0 +1,12 @@
+customCommands:
+  - key: "C"
+    command: "git cz"
+    description: "commit with commitizen (cz-emoji-conventional)"
+    context: "files"
+    loadingText: "opening commitizen commit tool"
+    subprocess: true
+  - key: "<c-p>"
+    command: "git fetch -Pp"
+    context: "remotes"
+    loadingText: "Pruning..."
+    description: "prune deleted remote branches"
