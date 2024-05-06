@@ -63,3 +63,12 @@ install all packages defined in nvim config.
 ### Timezone
 
 This install script also set Singapore's time as the defualt system time.
+
+### SSH keys
+
+For security reason, ssh keys are not committed into this public repository.
+You can use SCP to copy current used keys to new machine.
+
+```bash
+scp .ssh/ <user>@<ip>:~/
+```
