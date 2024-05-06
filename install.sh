@@ -1,7 +1,7 @@
 # Install Essential Tools
 
 echo "set system timezone to Asia/Singapore"
-set-timezone Asia/Singapore
+timedatectl set-timezone Asia/Singapore
 
 echo "Upgrading current packages.."
 sudo apt-get update && sudo apt-get upgrade -y
@@ -49,7 +49,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 echo "Installing NodeJS.."
 
-cargo install fnm
+echo "Installing yazi.."
+
+ ~/.cargo/bin/cargo install fnm yazi-fm yazi-cli
 fnm completions --shell=fish > ~/.config/fish/completions/fnm.fish
 
 fnm install latest
@@ -57,12 +59,14 @@ fnm default latest
 
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 
-
 pnpm install -g tree-sitter-cli commitizen cz-emoji-conventional
 
 echo "Installing Python.."
 
 curl -sSL https://pyenv.run | bash
+
+pyenv install 3.12
+pyenv global 3.12
 
 echo "Installing Lazygit.."
 
@@ -73,9 +77,5 @@ sudo install lazygit /usr/local/bin
 
 stow layzgit nvim
 
-echo "Installing yazi.."
-
-cargo install --locked yazi-fm yazi-cli
-
-stow home ssh_pub
+stow home 
 
