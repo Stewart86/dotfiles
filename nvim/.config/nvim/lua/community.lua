@@ -13,13 +13,19 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.python" },
-  -- { import = "astrocommunity.pack.python-ruff" },
+  { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.fish" },
+  { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.pack.json" },
+  { import = "astrocommunity.pack.toml" },
+  { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.pack.rust" },
 
   { import = "astrocommunity.lsp.garbage-day-nvim" },
   { import = "astrocommunity.lsp.lsp-lens-nvim" },
-  { import = "astrocommunity.lsp.lsp-signature-nvim" },
+  { import = "astrocommunity.lsp.ts-error-translator-nvim" },
 
   { import = "astrocommunity.motion.nvim-surround" },
 
